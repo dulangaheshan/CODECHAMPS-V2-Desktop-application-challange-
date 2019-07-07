@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.codeChamp.ExaminationResults.MainController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <TextField fx:id="fieldSearch"/>
+    <Button text="Search" fx:id="search" onAction="#search"/>
+    <Label fx:id="labelInfo"/>
+    <Label fx:id="name"/>
+    <Label fx:id="indexNumber"/>
+    <Label fx:id="zScore"/>
+    <Label fx:id="districtRank"/>
+    <Label fx:id="sub1"/>
+    <Label fx:id="sub2"/>
+    <Label fx:id="sub3"/>
+    <Label fx:id="sub4"/>
+    <Label fx:id="sub5"/>
+    <Label fx:id="sub6"/>
+
+
+
+
+</VBox>
