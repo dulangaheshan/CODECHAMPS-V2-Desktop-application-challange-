@@ -38,9 +38,15 @@ public class MainController {
     public javafx.scene.control.Label sub5;
     @FXML
     public javafx.scene.control.Label sub6;
+    @FXML
+    public javafx.scene.control.Label title;
+
+
 
 
     public void search(ActionEvent actionEvent) throws Exception {
+
+
         String index = fieldSearch.getText();
 
         List<String> indexNumbers = Arrays.asList(index.split("\\s*,\\s*"));
@@ -54,6 +60,8 @@ public class MainController {
             for(int i=0;i<indexNumbers.size();i++){
                 Thread.sleep(1000L);
                 saveAsText.generateResultSheets(indexNumbers.get(i));
+                clearFields();
+                title.setText("Results are generated c:\\codechamp");
 
             }
 
@@ -88,16 +96,7 @@ public class MainController {
         if (results.get("year").toString() == "null") {
 
             labelInfo.setText(results.get("errMsge").toString());
-            name.setText("");
-            indexNumber.setText("");
-            districtRank.setText("");
-            zScore.setText("");
-            sub1.setText("");
-            sub2.setText("");
-            sub3.setText("");
-            sub5.setText("");
-            sub4.setText("");
-            sub5.setText("");
+            clearFields();
 
 
         } else {
@@ -144,6 +143,23 @@ public class MainController {
             //System.out.println(subj5);
             sub5.setText(subj5.get("subjectName") + ": " + subj5.get("subjectResult"));
         }
+
+    }
+
+    public void clearFields(){
+
+        labelInfo.setText("");
+        name.setText("");
+        indexNumber.setText("");
+        districtRank.setText("");
+        zScore.setText("");
+        sub1.setText("");
+        sub2.setText("");
+        sub3.setText("");
+        sub5.setText("");
+        sub4.setText("");
+        sub5.setText("");
+        title.setText("");
 
     }
 

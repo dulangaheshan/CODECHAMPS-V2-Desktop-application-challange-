@@ -10,7 +10,7 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.codeChamp.ExaminationResults.MainController"
             prefHeight="400.0" prefWidth="600.0">
-
+    <Label text="Enter Index If You Want check More than one add indexno1,indexno2,.." />
     <TextField fx:id="fieldSearch"/>
     <Button text="Search" fx:id="search" onAction="#search"/>
     <Label fx:id="labelInfo"/>
@@ -24,6 +24,8 @@
     <Label fx:id="sub4"/>
     <Label fx:id="sub5"/>
     <Label fx:id="sub6"/>
+    <Label fx:id="title"/>
+
 
 
 
